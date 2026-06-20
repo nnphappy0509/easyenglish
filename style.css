@@ -1,7 +1,7 @@
-/* 기본 웹폰트 및 페이지 배경 설정 */
+/* 기본 설정 */
 body {
     font-family: 'Pretendard', 'Malgun Gothic', sans-serif;
-    background-color: #f4f4f5; /* 깃허브 호스팅 시 깔끔한 배경 */
+    background-color: #f4f4f5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +9,7 @@ body {
     margin: 0;
 }
 
-/* 앱 전체를 감싸는 흰색 컨테이너 */
+/* 앱 화면 컨테이너 */
 .app-container {
     background-color: #ffffff;
     width: 100%;
@@ -24,7 +24,7 @@ body {
     flex-direction: column;
 }
 
-/* 헤더 및 처음으로 버튼 */
+/* 상단 헤더 */
 header {
     display: flex;
     justify-content: space-between;
@@ -39,22 +39,62 @@ header h1 {
 }
 
 .btn-home {
-    background-color: #f3f4f6;
+    background-color: #e2e8f0;
     border: none;
-    padding: 8px 14px;
+    padding: 6px 14px;
     border-radius: 20px;
     cursor: pointer;
     font-size: 0.85rem;
-    color: #4b5563;
+    color: #475569;
     font-weight: bold;
     transition: background-color 0.2s;
 }
 
-.btn-home:hover {
-    background-color: #e5e7eb;
+.btn-home:hover { background-color: #cbd5e1; }
+
+/* 텍스트 입력 영역 */
+#user-input {
+    width: 100%;
+    height: 180px;
+    padding: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: none;
+    box-sizing: border-box;
+    outline: none;
+    margin-bottom: 15px;
+    transition: border-color 0.2s;
 }
 
-/* 버튼 그리드 레이아웃 */
+#user-input:focus { border-color: #3b82f6; }
+
+.btn-start {
+    width: 100%;
+    padding: 14px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background-color 0.2s;
+}
+
+.btn-start:hover { background-color: #2563eb; }
+
+/* 안내 문구 */
+.instruction {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+/* 메뉴 버튼 그리드 */
 .menu-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -75,20 +115,13 @@ header h1 {
 .btn-menu:active { transform: scale(0.97); }
 .btn-menu:hover { opacity: 0.85; }
 
-/* 버튼 개별 색상 (스크린샷 기반) */
 .btn-blue { background-color: #e0e7ff; color: #4338ca; }
 .btn-green { background-color: #dcfce7; color: #15803d; }
 .btn-blue-light { background-color: #dbeafe; color: #1d4ed8; }
 .btn-yellow { background-color: #fef08a; color: #a16207; }
 .btn-purple { background-color: #f3e8ff; color: #7e22ce; }
 
-/* 본문 영역 */
-.instruction {
-    font-size: 0.9rem;
-    color: #6b7280;
-    margin-bottom: 12px;
-}
-
+/* 텍스트 출력 영역 */
 #text-container {
     flex-grow: 1;
     background-color: #f8fafc;
@@ -96,9 +129,10 @@ header h1 {
     padding: 16px;
     line-height: 1.6;
     color: #333;
+    min-height: 200px;
 }
 
-/* 문장별 해석 모드용 스타일 (추가된 기능) */
+/* 해석 모드 (문장별 아이템) */
 .sentence-item {
     padding: 14px;
     margin-bottom: 10px;
