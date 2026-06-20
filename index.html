@@ -1,33 +1,12 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>영어 학습 도우미</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="app-container">
-        <header>
-            <h1>영어 학습 도우미</h1>
-            <button id="btn-home" class="btn-home">처음으로</button>
-        </header>
-
-        <nav class="menu-grid">
-            <button id="btn-word" class="btn-menu btn-blue">단어 학습</button>
-            <button id="btn-listen" class="btn-menu btn-green">전체 듣기</button>
-            <button id="btn-translate" class="btn-menu btn-blue-light">해석</button>
-            <button id="btn-grammar" class="btn-menu btn-yellow">어법 설명</button>
-            <button id="btn-write" class="btn-menu btn-purple" style="grid-column: span 2;">영작 연습</button>
-        </nav>
-
-        <main id="content-area">
-            <p class="instruction" id="instruction-text">메뉴를 선택하여 학습을 시작하세요.</p>
-            <div id="text-container">
-                </div>
-        </main>
+<main id="content-area">
+    <div id="input-section">
+        <textarea id="user-input" placeholder="공부할 영어 스크립트를 이곳에 붙여넣으세요..."></textarea>
+        <button id="btn-start" class="btn-menu btn-blue" style="width: 100%; margin-top: 10px;">학습 시작</button>
     </div>
 
-    <script src="script.js"></script>
-</body>
-</html>
+    <div id="learning-section" style="display: none;">
+        <p class="instruction" id="instruction-text">메뉴를 선택하여 학습을 시작하세요.</p>
+        <div id="text-container">
+            </div>
+    </div>
+</main>
